@@ -1,0 +1,69 @@
+// Inheritance : Subclass can acquire the methods of the super class
+// syntax class subclass extends superclass{}
+// type of inheritance 
+// Single Inheritance : only single subclass can acquire the properties of Superclass
+//example 
+class vehicle {
+void Start(){
+System.out.println("Vehicle starts");
+}
+}
+class car extends vehicle{
+void drive(){
+System.out.println("car starts");
+}
+}
+//Multilevel Inheritance :A class extends a class, and another class extends that child class.
+//example
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starts");
+    }
+}
+
+class Car extends Vehicle {
+    void drive() {
+        System.out.println("Car drives");
+    }
+}
+
+class ElectricCar extends Car {
+    void charge() {
+        System.out.println("Electric car charges");
+    }
+}
+//Hierarchical Inheritance : One parent class has multiple child classes.
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starts");
+    }
+}
+
+class Car extends Vehicle {
+    void drive() {
+        System.out.println("Car drives");
+    }
+}
+
+class Bike extends Vehicle {
+    void ride(){
+ System.out.println("bike rides");
+    }
+}
+// Why Java Does Not Support Multiple Inheritance With Classes
+// Reason: ambiguity problem.
+// example
+class A {
+    void show() {
+        System.out.println("A show");
+    }
+}
+
+class B {
+    void show() {
+        System.out.println("B show");
+    }
+}
+C obj = new C();
+obj.show(); // Which show? A or B?
+//Java does not support multiple inheritance with classes to avoid ambiguity, but it supports multiple inheritance through interfaces.
