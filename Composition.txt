@@ -1,0 +1,4 @@
+// Composition is strong has-a relationship
+// one class contains the object of the another class
+// object can't exist independently
+// if the container object is destroyed then contained can not exist
