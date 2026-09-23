@@ -1,0 +1,18 @@
+class BankAccount {
+
+    // Private data member: cannot be accessed or modified directly from outside the class.
+    private double balance;
+
+    // Public getter provides controlled read access to the private balance.
+    public double getBalance() {
+        return balance;
+    }
+
+    // Public method provides controlled modification of balance.
+    // Deposit is allowed only when the amount is greater than 0.
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance = balance + amount;
+        }
+    }
+}
