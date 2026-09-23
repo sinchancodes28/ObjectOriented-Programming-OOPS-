@@ -1,0 +1,67 @@
+// Polymorphism : Polymorphism means one name, many forms.
+//Method Overloading
+
+(* Method overloading means same method name but different parameters.
+Rules:
+Overloading can happen by changing:
+number of parameters
+type of parameters
+order of parameters *)
+// Changing only return type is not method overloading.
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+main{
+Calculator c = new Calculator();
+
+System.out.println(c.add(2, 3));
+System.out.println(c.add(2, 3, 4));
+System.out.println(c.add(2.5, 3.5));
+}
+(* Method Overriding
+Method overriding means child class provides its own implementation of parent class method.
+Rules:
+Same method name
+Same parameters
+Same return type or covariant return type
+Parent-child relationship required
+Runtime polymorphism
+@Override annotation is recommended *)
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starts");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("Car starts with key/button");
+    }
+}
+
+class Bike extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("Bike starts with self/kick");
+    }
+}
+main{
+Vehicle v1 = new Car();
+Vehicle v2 = new Bike();
+
+v1.start(); // Car starts with key/button
+v2.start(); // Bike starts with self/kick
+}
+//Method overriding is runtime polymorphism because method execution depends on the actual object.
+// only in method overriding the superclass reference can access the subclass methods
