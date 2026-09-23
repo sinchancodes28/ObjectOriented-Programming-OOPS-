@@ -1,0 +1,4 @@
+// Aggregation is the weak has-a relationship
+// one class contains the object of another class
+// both the contained and container class can exist independently
+// if the object of container class is destroyed then contained class object can still exist
