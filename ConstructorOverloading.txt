@@ -1,0 +1,18 @@
+//constructor overloading is also an example of compile-time polymorphism.
+class Car {
+    String model;
+    int price;
+
+    Car() {
+        model = "Unknown";
+    }
+
+    Car(String model) {
+        this.model = model;
+    }
+
+    Car(String model, int price) {
+        this.model = model;
+        this.price = price;
+    }
+}
